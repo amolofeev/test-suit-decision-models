@@ -1,0 +1,2307 @@
+results:
+  model: d1-omni:600m
+  source: decision-tests/test/commit-format.yaml
+  states:
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5527
+          'no': 0.4473
+        confidence: 0.1053
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.2979
+          'no': 0.7021
+        confidence: 0.4041
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4471
+          'no': 0.5529
+        confidence: 0.1059
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7837
+          'no': 0.2163
+        confidence: 0.5674
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5851
+          'no': 0.4149
+        confidence: 0.1701
+      id_match:
+        type: choice
+        choice: no_id_field
+        probabilities:
+          match: 0.3422
+          mismatch: 0.2551
+          no_id_field: 0.4027
+        confidence: 0.1041
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1752
+          id_missing: 0.0357
+          id_not_first: 0.1323
+          prefix_missing: 0.0938
+          prefix_wrong_place: 0.0999
+          summary_missing: 0.0701
+          blank_line_missing: 0.2315
+          explanation_missing: 0.0507
+          explanation_not_bulleted: 0.1108
+        confidence: 0.1354
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1681
+          explanation_missing: 0.0517
+          blank_line_missing: 0.1971
+          summary_missing: 0.0418
+          prefix_wrong_place: 0.0613
+          prefix_missing: 0.224
+          id_not_first: 0.1403
+          id_missing: 0.0358
+          none: 0.0798
+        confidence: 0.127
+      severity:
+        type: score
+        score: 0.7758
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4407
+          '1': 0.3428
+          '2': 0.2165
+        confidence: 0.0
+  - state: '#42 Добавил валидацию спеки decision-tests
+
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5549
+          'no': 0.4451
+        confidence: 0.1097
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4593
+          'no': 0.5407
+        confidence: 0.0813
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4547
+          'no': 0.5453
+        confidence: 0.0907
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.839
+          'no': 0.161
+        confidence: 0.678
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5622
+          'no': 0.4378
+        confidence: 0.1243
+      id_match:
+        type: choice
+        choice: no_id_field
+        probabilities:
+          match: 0.3334
+          mismatch: 0.2523
+          no_id_field: 0.4143
+        confidence: 0.1214
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1502
+          id_missing: 0.0581
+          id_not_first: 0.1303
+          prefix_missing: 0.0475
+          prefix_wrong_place: 0.0526
+          summary_missing: 0.0825
+          blank_line_missing: 0.2968
+          explanation_missing: 0.0556
+          explanation_not_bulleted: 0.1264
+        confidence: 0.2089
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.1867
+          explanation_missing: 0.0465
+          blank_line_missing: 0.2119
+          summary_missing: 0.0524
+          prefix_wrong_place: 0.0395
+          prefix_missing: 0.144
+          id_not_first: 0.1617
+          id_missing: 0.0731
+          none: 0.0842
+        confidence: 0.1134
+      severity:
+        type: score
+        score: 0.7873
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4286
+          '1': 0.3554
+          '2': 0.216
+        confidence: 0.0
+  - state: '[AI] Добавил валидацию спеки decision-tests
+
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4977
+          'no': 0.5023
+        confidence: 0.0046
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3992
+          'no': 0.6008
+        confidence: 0.2015
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3948
+          'no': 0.6052
+        confidence: 0.2104
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8053
+          'no': 0.1947
+        confidence: 0.6106
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5443
+          'no': 0.4557
+        confidence: 0.0885
+      id_match:
+        type: choice
+        choice: no_id_field
+        probabilities:
+          match: 0.3499
+          mismatch: 0.2694
+          no_id_field: 0.3807
+        confidence: 0.0711
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1499
+          id_missing: 0.0346
+          id_not_first: 0.12
+          prefix_missing: 0.1258
+          prefix_wrong_place: 0.0684
+          summary_missing: 0.0727
+          blank_line_missing: 0.2587
+          explanation_missing: 0.0547
+          explanation_not_bulleted: 0.1152
+        confidence: 0.1661
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1493
+          explanation_missing: 0.048
+          blank_line_missing: 0.1967
+          summary_missing: 0.0444
+          prefix_wrong_place: 0.057
+          prefix_missing: 0.2463
+          id_not_first: 0.1484
+          id_missing: 0.0374
+          none: 0.0725
+        confidence: 0.1521
+      severity:
+        type: score
+        score: 0.7614
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4434
+          '1': 0.3519
+          '2': 0.2048
+        confidence: 0.0
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6226
+          'no': 0.3774
+        confidence: 0.2453
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4177
+          'no': 0.5823
+        confidence: 0.1647
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4762
+          'no': 0.5238
+        confidence: 0.0475
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7933
+          'no': 0.2067
+        confidence: 0.5866
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.543
+          'no': 0.457
+        confidence: 0.0859
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4793
+          mismatch: 0.2803
+          no_id_field: 0.2403
+        confidence: 0.219
+      defect:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          none: 0.0882
+          id_missing: 0.0441
+          id_not_first: 0.0788
+          prefix_missing: 0.4184
+          prefix_wrong_place: 0.069
+          summary_missing: 0.068
+          blank_line_missing: 0.118
+          explanation_missing: 0.037
+          explanation_not_bulleted: 0.0785
+        confidence: 0.3457
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1006
+          explanation_missing: 0.0585
+          blank_line_missing: 0.1197
+          summary_missing: 0.0742
+          prefix_wrong_place: 0.0637
+          prefix_missing: 0.3804
+          id_not_first: 0.1103
+          id_missing: 0.0374
+          none: 0.0553
+        confidence: 0.303
+      severity:
+        type: score
+        score: 0.997
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.3599
+          '1': 0.2831
+          '2': 0.357
+        confidence: 0.0
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.511
+          'no': 0.489
+        confidence: 0.022
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.2218
+          'no': 0.7782
+        confidence: 0.5564
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4843
+          'no': 0.5157
+        confidence: 0.0314
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7825
+          'no': 0.2175
+        confidence: 0.565
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5891
+          'no': 0.4109
+        confidence: 0.1782
+      id_match:
+        type: choice
+        choice: no_id_field
+        probabilities:
+          match: 0.3069
+          mismatch: 0.253
+          no_id_field: 0.4401
+        confidence: 0.1602
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1577
+          id_missing: 0.0265
+          id_not_first: 0.125
+          prefix_missing: 0.1166
+          prefix_wrong_place: 0.0793
+          summary_missing: 0.0683
+          blank_line_missing: 0.2569
+          explanation_missing: 0.0644
+          explanation_not_bulleted: 0.1053
+        confidence: 0.164
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.1462
+          explanation_missing: 0.0595
+          blank_line_missing: 0.2364
+          summary_missing: 0.0461
+          prefix_wrong_place: 0.05
+          prefix_missing: 0.1975
+          id_not_first: 0.1517
+          id_missing: 0.0405
+          none: 0.0721
+        confidence: 0.1409
+      severity:
+        type: score
+        score: 0.6602
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.5046
+          '1': 0.3307
+          '2': 0.1647
+        confidence: 0.0098
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+
+      Подключил msgspec к загрузке YAML-спеки и добавил краш на неизвестные поля секции
+      test.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4669
+          'no': 0.5331
+        confidence: 0.0662
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3802
+          'no': 0.6198
+        confidence: 0.2395
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.502
+          'no': 0.498
+        confidence: 0.004
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7285
+          'no': 0.2715
+        confidence: 0.457
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5901
+          'no': 0.4099
+        confidence: 0.1802
+      id_match:
+        type: choice
+        choice: no_id_field
+        probabilities:
+          match: 0.336
+          mismatch: 0.2462
+          no_id_field: 0.4178
+        confidence: 0.1267
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1543
+          id_missing: 0.0459
+          id_not_first: 0.1094
+          prefix_missing: 0.1098
+          prefix_wrong_place: 0.0914
+          summary_missing: 0.0763
+          blank_line_missing: 0.2213
+          explanation_missing: 0.0613
+          explanation_not_bulleted: 0.1303
+        confidence: 0.1239
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1591
+          explanation_missing: 0.0604
+          blank_line_missing: 0.1825
+          summary_missing: 0.0547
+          prefix_wrong_place: 0.0839
+          prefix_missing: 0.2075
+          id_not_first: 0.1118
+          id_missing: 0.0468
+          none: 0.0934
+        confidence: 0.1084
+      severity:
+        type: score
+        score: 0.8026
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4251
+          '1': 0.3473
+          '2': 0.2277
+        confidence: 0.0
+  - state: '#42 [ai] Добавил валидацию спеки decision-tests
+
+
+      - Подключил msgspec к загрузке YAML-спеки.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.614
+          'no': 0.386
+        confidence: 0.2279
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5084
+          'no': 0.4916
+        confidence: 0.0168
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4359
+          'no': 0.5641
+        confidence: 0.1281
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7889
+          'no': 0.2111
+        confidence: 0.5778
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5499
+          'no': 0.4501
+        confidence: 0.0998
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4163
+          mismatch: 0.2314
+          no_id_field: 0.3523
+        confidence: 0.1245
+      defect:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          none: 0.1595
+          id_missing: 0.0457
+          id_not_first: 0.1076
+          prefix_missing: 0.2172
+          prefix_wrong_place: 0.0918
+          summary_missing: 0.0702
+          blank_line_missing: 0.1766
+          explanation_missing: 0.0352
+          explanation_not_bulleted: 0.0961
+        confidence: 0.1193
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.0961
+          explanation_missing: 0.0413
+          blank_line_missing: 0.1245
+          summary_missing: 0.0629
+          prefix_wrong_place: 0.0667
+          prefix_missing: 0.3843
+          id_not_first: 0.1215
+          id_missing: 0.0358
+          none: 0.0669
+        confidence: 0.3073
+      severity:
+        type: score
+        score: 0.7879
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4443
+          '1': 0.3236
+          '2': 0.2322
+        confidence: 0.0
+  - state: 'Спринт 12: #42 [AI] Добавил валидацию спеки decision-tests
+
+
+      - Подключил msgspec к загрузке YAML-спеки.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5794
+          'no': 0.4206
+        confidence: 0.1589
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4678
+          'no': 0.5322
+        confidence: 0.0643
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4686
+          'no': 0.5314
+        confidence: 0.0628
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7479
+          'no': 0.2521
+        confidence: 0.4959
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5317
+          'no': 0.4683
+        confidence: 0.0635
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.416
+          mismatch: 0.2321
+          no_id_field: 0.3519
+        confidence: 0.124
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1441
+          id_missing: 0.051
+          id_not_first: 0.115
+          prefix_missing: 0.1014
+          prefix_wrong_place: 0.0728
+          summary_missing: 0.0656
+          blank_line_missing: 0.2802
+          explanation_missing: 0.0454
+          explanation_not_bulleted: 0.1245
+        confidence: 0.1902
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.0927
+          explanation_missing: 0.0485
+          blank_line_missing: 0.2071
+          summary_missing: 0.0476
+          prefix_wrong_place: 0.0538
+          prefix_missing: 0.3247
+          id_not_first: 0.1203
+          id_missing: 0.035
+          none: 0.0703
+        confidence: 0.2402
+      severity:
+        type: score
+        score: 0.8168
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4117
+          '1': 0.3597
+          '2': 0.2285
+        confidence: 0.0
+  - state: '#42 Добавил валидацию спеки decision-tests [AI]
+
+
+      - Подключил msgspec к загрузке YAML-спеки.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.596
+          'no': 0.404
+        confidence: 0.1919
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4709
+          'no': 0.5291
+        confidence: 0.0583
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4699
+          'no': 0.5301
+        confidence: 0.0602
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.793
+          'no': 0.207
+        confidence: 0.5861
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5259
+          'no': 0.4741
+        confidence: 0.0519
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4046
+          mismatch: 0.2556
+          no_id_field: 0.3398
+        confidence: 0.107
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1312
+          id_missing: 0.0532
+          id_not_first: 0.1233
+          prefix_missing: 0.1623
+          prefix_wrong_place: 0.096
+          summary_missing: 0.0763
+          blank_line_missing: 0.1971
+          explanation_missing: 0.0352
+          explanation_not_bulleted: 0.1254
+        confidence: 0.0967
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1341
+          explanation_missing: 0.0463
+          blank_line_missing: 0.1533
+          summary_missing: 0.0589
+          prefix_wrong_place: 0.0932
+          prefix_missing: 0.251
+          id_not_first: 0.1387
+          id_missing: 0.0553
+          none: 0.0694
+        confidence: 0.1574
+      severity:
+        type: score
+        score: 0.7671
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4622
+          '1': 0.3085
+          '2': 0.2293
+        confidence: 0.0
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+
+      - Подключил msgspec к загрузке YAML-спеки; добавил краш на неизвестные поля
+      секции test.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5029
+          'no': 0.4971
+        confidence: 0.0058
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3094
+          'no': 0.6906
+        confidence: 0.3811
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4975
+          'no': 0.5025
+        confidence: 0.005
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7567
+          'no': 0.2433
+        confidence: 0.5133
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5684
+          'no': 0.4316
+        confidence: 0.1368
+      id_match:
+        type: choice
+        choice: no_id_field
+        probabilities:
+          match: 0.364
+          mismatch: 0.2447
+          no_id_field: 0.3913
+        confidence: 0.087
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1569
+          id_missing: 0.0343
+          id_not_first: 0.1031
+          prefix_missing: 0.118
+          prefix_wrong_place: 0.0807
+          summary_missing: 0.0688
+          blank_line_missing: 0.2372
+          explanation_missing: 0.0655
+          explanation_not_bulleted: 0.1354
+        confidence: 0.1419
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1413
+          explanation_missing: 0.0699
+          blank_line_missing: 0.1894
+          summary_missing: 0.0545
+          prefix_wrong_place: 0.0639
+          prefix_missing: 0.261
+          id_not_first: 0.1138
+          id_missing: 0.039
+          none: 0.0672
+        confidence: 0.1686
+      severity:
+        type: score
+        score: 0.7675
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.45
+          '1': 0.3325
+          '2': 0.2175
+        confidence: 0.0
+  - state: '#42 [AI]
+
+
+      - Подключил msgspec к загрузке YAML-спеки.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6337
+          'no': 0.3663
+        confidence: 0.2673
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6969
+          'no': 0.3031
+        confidence: 0.3937
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4613
+          'no': 0.5387
+        confidence: 0.0775
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7453
+          'no': 0.2547
+        confidence: 0.4907
+      has_explanation_v2:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4671
+          'no': 0.5329
+        confidence: 0.0657
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4164
+          mismatch: 0.2874
+          no_id_field: 0.2963
+        confidence: 0.1245
+      defect:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          none: 0.1231
+          id_missing: 0.0473
+          id_not_first: 0.0957
+          prefix_missing: 0.2968
+          prefix_wrong_place: 0.0963
+          summary_missing: 0.0549
+          blank_line_missing: 0.1569
+          explanation_missing: 0.0313
+          explanation_not_bulleted: 0.0976
+        confidence: 0.2089
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1208
+          explanation_missing: 0.0322
+          blank_line_missing: 0.1119
+          summary_missing: 0.0522
+          prefix_wrong_place: 0.0796
+          prefix_missing: 0.415
+          id_not_first: 0.0967
+          id_missing: 0.0293
+          none: 0.0624
+        confidence: 0.3419
+      severity:
+        type: score
+        score: 0.851
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4079
+          '1': 0.3332
+          '2': 0.2589
+        confidence: 0.0
+  - state:
+      commit:
+        text: '#77 [AI] Переименовал вопрос urgency в urgent
+
+
+          - Переименовал name вопроса в спеке.
+
+          - Оставил один вопрос, чтобы не плодить дубль стейта.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8442
+          'no': 0.1558
+        confidence: 0.6884
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5908
+          'no': 0.4092
+        confidence: 0.1816
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.665
+          'no': 0.335
+        confidence: 0.3299
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7754
+          'no': 0.2246
+        confidence: 0.5507
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6392
+          'no': 0.3608
+        confidence: 0.2784
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4893
+          mismatch: 0.2934
+          no_id_field: 0.2173
+        confidence: 0.234
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1089
+          id_missing: 0.0227
+          id_not_first: 0.1108
+          prefix_missing: 0.1989
+          prefix_wrong_place: 0.0839
+          summary_missing: 0.0318
+          blank_line_missing: 0.3262
+          explanation_missing: 0.0435
+          explanation_not_bulleted: 0.0734
+        confidence: 0.2419
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.0803
+          explanation_missing: 0.0394
+          blank_line_missing: 0.3197
+          summary_missing: 0.0154
+          prefix_wrong_place: 0.0755
+          prefix_missing: 0.2771
+          id_not_first: 0.1164
+          id_missing: 0.0279
+          none: 0.0484
+        confidence: 0.2347
+      severity:
+        type: score
+        score: 0.8008
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4745
+          '1': 0.2502
+          '2': 0.2753
+        confidence: 0.0
+  - state:
+      commit:
+        text: '#77 [AI] Переименовал вопрос urgency в urgent
+
+
+          - Переименовал name вопроса в спеке.
+
+          - Оставил один вопрос, чтобы не плодить дубль стейта.'
+        has_id: 'yes'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7846
+          'no': 0.2154
+        confidence: 0.5692
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7014
+          'no': 0.2986
+        confidence: 0.4028
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6666
+          'no': 0.3334
+        confidence: 0.3331
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7721
+          'no': 0.2279
+        confidence: 0.5443
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6704
+          'no': 0.3296
+        confidence: 0.3407
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.5567
+          mismatch: 0.2779
+          no_id_field: 0.1654
+        confidence: 0.335
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0885
+          id_missing: 0.019
+          id_not_first: 0.1981
+          prefix_missing: 0.2169
+          prefix_wrong_place: 0.088
+          summary_missing: 0.0316
+          blank_line_missing: 0.245
+          explanation_missing: 0.0354
+          explanation_not_bulleted: 0.0775
+        confidence: 0.1506
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.0913
+          explanation_missing: 0.0373
+          blank_line_missing: 0.2725
+          summary_missing: 0.0208
+          prefix_wrong_place: 0.0864
+          prefix_missing: 0.256
+          id_not_first: 0.1454
+          id_missing: 0.0316
+          none: 0.0586
+        confidence: 0.1815
+      severity:
+        type: score
+        score: 0.995
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.3776
+          '1': 0.2498
+          '2': 0.3726
+        confidence: 0.0
+  - state:
+      commit:
+        text: '#77 [AI] Переименовал вопрос urgency в urgent
+
+
+          - Переименовал name вопроса в спеке.
+
+          - Оставил один вопрос, чтобы не плодить дубль стейта.'
+        has_id: 'yes'
+        has_ai_prefix: 'yes'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7839
+          'no': 0.2161
+        confidence: 0.5677
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5237
+          'no': 0.4763
+        confidence: 0.0475
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6669
+          'no': 0.3331
+        confidence: 0.3338
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7787
+          'no': 0.2213
+        confidence: 0.5574
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6329
+          'no': 0.3671
+        confidence: 0.2657
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.5593
+          mismatch: 0.3124
+          no_id_field: 0.1284
+        confidence: 0.3389
+      defect:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          none: 0.0968
+          id_missing: 0.0236
+          id_not_first: 0.1565
+          prefix_missing: 0.2232
+          prefix_wrong_place: 0.1487
+          summary_missing: 0.0431
+          blank_line_missing: 0.1716
+          explanation_missing: 0.0475
+          explanation_not_bulleted: 0.089
+        confidence: 0.1262
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.0844
+          explanation_missing: 0.0431
+          blank_line_missing: 0.2213
+          summary_missing: 0.02
+          prefix_wrong_place: 0.1245
+          prefix_missing: 0.2018
+          id_not_first: 0.2171
+          id_missing: 0.0285
+          none: 0.0593
+        confidence: 0.124
+      severity:
+        type: score
+        score: 1.0044
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.3737
+          '1': 0.2483
+          '2': 0.3781
+        confidence: 0.0
+  - state:
+      commit:
+        text: '#77 [AI] Переименовал вопрос urgency в urgent
+
+
+          - Переименовал name вопроса в спеке.
+
+          - Оставил один вопрос, чтобы не плодить дубль стейта.'
+        has_id: 'yes'
+        has_ai_prefix: 'yes'
+        has_summary: 'yes'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.706
+          'no': 0.294
+        confidence: 0.4121
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.495
+          'no': 0.505
+        confidence: 0.0101
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6634
+          'no': 0.3366
+        confidence: 0.3268
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7678
+          'no': 0.2322
+        confidence: 0.5355
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5672
+          'no': 0.4328
+        confidence: 0.1344
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.5847
+          mismatch: 0.2751
+          no_id_field: 0.1402
+        confidence: 0.3771
+      defect:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          none: 0.086
+          id_missing: 0.0236
+          id_not_first: 0.1417
+          prefix_missing: 0.3159
+          prefix_wrong_place: 0.1009
+          summary_missing: 0.0392
+          blank_line_missing: 0.1689
+          explanation_missing: 0.0398
+          explanation_not_bulleted: 0.084
+        confidence: 0.2304
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.0796
+          explanation_missing: 0.0426
+          blank_line_missing: 0.2546
+          summary_missing: 0.0218
+          prefix_wrong_place: 0.1346
+          prefix_missing: 0.1757
+          id_not_first: 0.1993
+          id_missing: 0.0302
+          none: 0.0617
+        confidence: 0.1614
+      severity:
+        type: score
+        score: 1.1099
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.338
+          '1': 0.2141
+          '2': 0.4479
+        confidence: 0.0
+  - state:
+      commit:
+        text: '#77 [AI] Переименовал вопрос urgency в urgent
+
+
+          - Переименовал name вопроса в спеке.
+
+          - Оставил один вопрос, чтобы не плодить дубль стейта.'
+        has_id: 'yes'
+        has_ai_prefix: 'yes'
+        has_summary: 'yes'
+        has_explanation: 'yes'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6954
+          'no': 0.3046
+        confidence: 0.3909
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.509
+          'no': 0.491
+        confidence: 0.0179
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7719
+          'no': 0.2281
+        confidence: 0.5439
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8087
+          'no': 0.1913
+        confidence: 0.6175
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6665
+          'no': 0.3335
+        confidence: 0.3331
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.5449
+          mismatch: 0.2851
+          no_id_field: 0.17
+        confidence: 0.3173
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0916
+          id_missing: 0.0278
+          id_not_first: 0.1193
+          prefix_missing: 0.2441
+          prefix_wrong_place: 0.1342
+          summary_missing: 0.0363
+          blank_line_missing: 0.2463
+          explanation_missing: 0.0359
+          explanation_not_bulleted: 0.0645
+        confidence: 0.1521
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.0872
+          explanation_missing: 0.0361
+          blank_line_missing: 0.2761
+          summary_missing: 0.0216
+          prefix_wrong_place: 0.11
+          prefix_missing: 0.125
+          id_not_first: 0.2477
+          id_missing: 0.0297
+          none: 0.0666
+        confidence: 0.1856
+      severity:
+        type: score
+        score: 1.1124
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.3508
+          '1': 0.1859
+          '2': 0.4632
+        confidence: 0.0
+  - state:
+      commit:
+        text: '#78 [AI] Дописал в спеку общий вердикт оформления
+
+
+          - Добавил стейт с метой follows_rules.
+
+          - Вопросы не менял: они остаются поштучными проверками.'
+        has_id: 'yes'
+        has_ai_prefix: 'yes'
+        has_summary: 'yes'
+        has_explanation: 'yes'
+        follows_rules: 'yes'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5946
+          'no': 0.4054
+        confidence: 0.1893
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5965
+          'no': 0.4035
+        confidence: 0.193
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6798
+          'no': 0.3202
+        confidence: 0.3597
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7381
+          'no': 0.2619
+        confidence: 0.4761
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5325
+          'no': 0.4675
+        confidence: 0.0649
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.368
+          mismatch: 0.2713
+          no_id_field: 0.3607
+        confidence: 0.052
+      defect:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          none: 0.0702
+          id_missing: 0.0411
+          id_not_first: 0.1325
+          prefix_missing: 0.2534
+          prefix_wrong_place: 0.1084
+          summary_missing: 0.0655
+          blank_line_missing: 0.2158
+          explanation_missing: 0.0318
+          explanation_not_bulleted: 0.0813
+        confidence: 0.1601
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.0752
+          explanation_missing: 0.0427
+          blank_line_missing: 0.2207
+          summary_missing: 0.0577
+          prefix_wrong_place: 0.1223
+          prefix_missing: 0.269
+          id_not_first: 0.1373
+          id_missing: 0.0312
+          none: 0.044
+        confidence: 0.1776
+      severity:
+        type: score
+        score: 0.7613
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4418
+          '1': 0.355
+          '2': 0.2032
+        confidence: 0.0
+  - state:
+      commit:
+        text: 'fix
+
+
+          а ещё я почистил логи и убрал старый код наверно'
+        has_id: 'yes'
+        has_ai_prefix: 'yes'
+        has_summary: 'yes'
+        has_explanation: 'yes'
+        follows_rules: 'yes'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8261
+          'no': 0.1739
+        confidence: 0.6521
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5873
+          'no': 0.4127
+        confidence: 0.1746
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6622
+          'no': 0.3378
+        confidence: 0.3244
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7721
+          'no': 0.2279
+        confidence: 0.5442
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6209
+          'no': 0.3791
+        confidence: 0.2418
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4687
+          mismatch: 0.3294
+          no_id_field: 0.2019
+        confidence: 0.203
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.1204
+          id_missing: 0.0499
+          id_not_first: 0.1645
+          prefix_missing: 0.033
+          prefix_wrong_place: 0.0091
+          summary_missing: 0.0639
+          blank_line_missing: 0.3645
+          explanation_missing: 0.05
+          explanation_not_bulleted: 0.1448
+        confidence: 0.2851
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.1106
+          explanation_missing: 0.0312
+          blank_line_missing: 0.2762
+          summary_missing: 0.0702
+          prefix_wrong_place: 0.0198
+          prefix_missing: 0.0948
+          id_not_first: 0.1941
+          id_missing: 0.0973
+          none: 0.1059
+        confidence: 0.1857
+      severity:
+        type: score
+        score: 1.0097
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.0817
+          '1': 0.8269
+          '2': 0.0914
+        confidence: 0.7403
+  - state: 'Правила оформления коммитов:
+
+      1. Заголовок: #<id> [AI] <краткое резюме задачи>.
+
+      2. После заголовка — пустая строка.
+
+      3. Подробное объяснение: что сделано и почему, каждый пункт отдельной строкой.
+
+
+      Задача: проверь, оформлен ли коммит ниже по этим правилам.
+
+
+      Коммит:
+
+      #79 Добавил автоформатер коммитов
+
+
+      - Подключил руф в CI.
+
+      - Выключил правило, которое ломает длинные строки.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5412
+          'no': 0.4588
+        confidence: 0.0824
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3924
+          'no': 0.6076
+        confidence: 0.2153
+      has_summary:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4163
+          'no': 0.5837
+        confidence: 0.1675
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8297
+          'no': 0.1703
+        confidence: 0.6593
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7311
+          'no': 0.2689
+        confidence: 0.4622
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.3734
+          mismatch: 0.2772
+          no_id_field: 0.3494
+        confidence: 0.0601
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0247
+          id_missing: 0.0155
+          id_not_first: 0.0193
+          prefix_missing: 0.0238
+          prefix_wrong_place: 0.0223
+          summary_missing: 0.0102
+          blank_line_missing: 0.808
+          explanation_missing: 0.0129
+          explanation_not_bulleted: 0.0634
+        confidence: 0.784
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.1176
+          explanation_missing: 0.021
+          blank_line_missing: 0.6876
+          summary_missing: 0.0243
+          prefix_wrong_place: 0.0198
+          prefix_missing: 0.0429
+          id_not_first: 0.045
+          id_missing: 0.0193
+          none: 0.0225
+        confidence: 0.6486
+      severity:
+        type: score
+        score: 0.7563
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4775
+          '1': 0.2888
+          '2': 0.2337
+        confidence: 0.0
+  - state:
+      commit:
+        rules: '1. Заголовок: #<id> [AI] <краткое резюме задачи>.
+
+          2. После заголовка — пустая строка.
+
+          3. Подробное объяснение: что сделано и почему, каждый пункт отдельной строкой.'
+        task: проверь, оформлен ли коммит ниже по этим правилам
+        text: '#79 Добавил автоформатер коммитов
+
+
+          - Подключил руф в CI.
+
+          - Выключил правило, которое ломает длинные строки.'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6071
+          'no': 0.3929
+        confidence: 0.2142
+      has_ai_prefix:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3609
+          'no': 0.6391
+        confidence: 0.2781
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.636
+          'no': 0.364
+        confidence: 0.272
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.9131
+          'no': 0.0869
+        confidence: 0.8262
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7522
+          'no': 0.2478
+        confidence: 0.5044
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.5113
+          mismatch: 0.2062
+          no_id_field: 0.2825
+        confidence: 0.2669
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0433
+          id_missing: 0.02
+          id_not_first: 0.039
+          prefix_missing: 0.0776
+          prefix_wrong_place: 0.0513
+          summary_missing: 0.0161
+          blank_line_missing: 0.6835
+          explanation_missing: 0.0169
+          explanation_not_bulleted: 0.0524
+        confidence: 0.6439
+      defect_rev:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          explanation_not_bulleted: 0.055
+          explanation_missing: 0.024
+          blank_line_missing: 0.6395
+          summary_missing: 0.0273
+          prefix_wrong_place: 0.0554
+          prefix_missing: 0.0989
+          id_not_first: 0.0609
+          id_missing: 0.015
+          none: 0.0239
+        confidence: 0.5945
+      severity:
+        type: score
+        score: 0.5922
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.6059
+          '1': 0.1961
+          '2': 0.198
+        confidence: 0.1118
+  - state:
+      commit:
+        text: '#101 [AI] Обновил настройки линтера
+
+
+          - Поправил правило для длинных строк.
+
+          - Обновил .editorconfig.'
+        issue_id: '101'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5554
+          'no': 0.4446
+        confidence: 0.1107
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5975
+          'no': 0.4025
+        confidence: 0.195
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5447
+          'no': 0.4553
+        confidence: 0.0894
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8845
+          'no': 0.1155
+        confidence: 0.769
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5566
+          'no': 0.4434
+        confidence: 0.1131
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4766
+          mismatch: 0.2443
+          no_id_field: 0.279
+        confidence: 0.2149
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0852
+          id_missing: 0.0402
+          id_not_first: 0.1068
+          prefix_missing: 0.2061
+          prefix_wrong_place: 0.0902
+          summary_missing: 0.0384
+          blank_line_missing: 0.2441
+          explanation_missing: 0.0724
+          explanation_not_bulleted: 0.1167
+        confidence: 0.1497
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1518
+          explanation_missing: 0.0726
+          blank_line_missing: 0.184
+          summary_missing: 0.0291
+          prefix_wrong_place: 0.078
+          prefix_missing: 0.3189
+          id_not_first: 0.0746
+          id_missing: 0.0424
+          none: 0.0486
+        confidence: 0.2337
+      severity:
+        type: score
+        score: 0.6205
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.5073
+          '1': 0.3649
+          '2': 0.1278
+        confidence: 0.0693
+  - state:
+      commit:
+        text: '#101 [AI] Обновил настройки линтера
+
+
+          - Поправил правило для длинных строк.
+
+          - Обновил .editorconfig.'
+        issue_id: '102'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5329
+          'no': 0.4671
+        confidence: 0.0658
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5578
+          'no': 0.4422
+        confidence: 0.1157
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5438
+          'no': 0.4562
+        confidence: 0.0877
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8721
+          'no': 0.1279
+        confidence: 0.7442
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5426
+          'no': 0.4574
+        confidence: 0.0852
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4502
+          mismatch: 0.2438
+          no_id_field: 0.306
+        confidence: 0.1754
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0883
+          id_missing: 0.0391
+          id_not_first: 0.1078
+          prefix_missing: 0.2086
+          prefix_wrong_place: 0.0874
+          summary_missing: 0.0398
+          blank_line_missing: 0.2471
+          explanation_missing: 0.0672
+          explanation_not_bulleted: 0.1146
+        confidence: 0.153
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1467
+          explanation_missing: 0.0718
+          blank_line_missing: 0.1895
+          summary_missing: 0.0301
+          prefix_wrong_place: 0.0836
+          prefix_missing: 0.304
+          id_not_first: 0.0784
+          id_missing: 0.0452
+          none: 0.0508
+        confidence: 0.217
+      severity:
+        type: score
+        score: 0.6377
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4992
+          '1': 0.3639
+          '2': 0.1369
+        confidence: 0.0434
+  - state:
+      commit:
+        text: '#101 [AI] Обновил настройки линтера
+
+
+          - Поправил правило для длинных строк.
+
+          - Обновил .editorconfig.'
+        issue_id: '9999'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5583
+          'no': 0.4417
+        confidence: 0.1165
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5746
+          'no': 0.4254
+        confidence: 0.1493
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5361
+          'no': 0.4639
+        confidence: 0.0721
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8774
+          'no': 0.1226
+        confidence: 0.7548
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5405
+          'no': 0.4595
+        confidence: 0.081
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.4906
+          mismatch: 0.2291
+          no_id_field: 0.2803
+        confidence: 0.2359
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0867
+          id_missing: 0.0421
+          id_not_first: 0.1071
+          prefix_missing: 0.2084
+          prefix_wrong_place: 0.0967
+          summary_missing: 0.0422
+          blank_line_missing: 0.2432
+          explanation_missing: 0.0641
+          explanation_not_bulleted: 0.1095
+        confidence: 0.1486
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1392
+          explanation_missing: 0.0721
+          blank_line_missing: 0.1917
+          summary_missing: 0.0358
+          prefix_wrong_place: 0.0929
+          prefix_missing: 0.2884
+          id_not_first: 0.0811
+          id_missing: 0.0504
+          none: 0.0484
+        confidence: 0.1995
+      severity:
+        type: score
+        score: 0.6493
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4902
+          '1': 0.3703
+          '2': 0.1395
+        confidence: 0.026
+  - state:
+      commit:
+        text: '#102 [AI] Обновил настройки линтера
+
+
+          - Поправил правило для длинных строк.
+
+          - Обновил .editorconfig.'
+        issue_id: '101'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.581
+          'no': 0.419
+        confidence: 0.1619
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5632
+          'no': 0.4368
+        confidence: 0.1264
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5727
+          'no': 0.4273
+        confidence: 0.1454
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8837
+          'no': 0.1163
+        confidence: 0.7674
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5535
+          'no': 0.4465
+        confidence: 0.1071
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.439
+          mismatch: 0.2786
+          no_id_field: 0.2823
+        confidence: 0.1585
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0874
+          id_missing: 0.0414
+          id_not_first: 0.1056
+          prefix_missing: 0.2113
+          prefix_wrong_place: 0.0915
+          summary_missing: 0.0414
+          blank_line_missing: 0.2395
+          explanation_missing: 0.0674
+          explanation_not_bulleted: 0.1145
+        confidence: 0.1444
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1576
+          explanation_missing: 0.0688
+          blank_line_missing: 0.1903
+          summary_missing: 0.0303
+          prefix_wrong_place: 0.0753
+          prefix_missing: 0.3131
+          id_not_first: 0.0802
+          id_missing: 0.0416
+          none: 0.043
+        confidence: 0.2273
+      severity:
+        type: score
+        score: 0.6407
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.4959
+          '1': 0.3674
+          '2': 0.1366
+        confidence: 0.0389
+  - state:
+      commit:
+        text: '#9999 [AI] Обновил настройки линтера
+
+
+          - Поправил правило для длинных строк.
+
+          - Обновил .editorconfig.'
+        issue_id: '101'
+    answers:
+      has_id:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5814
+          'no': 0.4186
+        confidence: 0.1629
+      has_ai_prefix:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5479
+          'no': 0.4521
+        confidence: 0.0959
+      has_summary:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5473
+          'no': 0.4527
+        confidence: 0.0946
+      has_explanation:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.9255
+          'no': 0.0745
+        confidence: 0.851
+      has_explanation_v2:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5173
+          'no': 0.4827
+        confidence: 0.0346
+      id_match:
+        type: choice
+        choice: match
+        probabilities:
+          match: 0.5007
+          mismatch: 0.2728
+          no_id_field: 0.2265
+        confidence: 0.2511
+      defect:
+        type: choice
+        choice: blank_line_missing
+        probabilities:
+          none: 0.0864
+          id_missing: 0.0564
+          id_not_first: 0.1173
+          prefix_missing: 0.1664
+          prefix_wrong_place: 0.087
+          summary_missing: 0.0426
+          blank_line_missing: 0.2678
+          explanation_missing: 0.067
+          explanation_not_bulleted: 0.1091
+        confidence: 0.1763
+      defect_rev:
+        type: choice
+        choice: prefix_missing
+        probabilities:
+          explanation_not_bulleted: 0.1463
+          explanation_missing: 0.0744
+          blank_line_missing: 0.202
+          summary_missing: 0.0312
+          prefix_wrong_place: 0.0741
+          prefix_missing: 0.2861
+          id_not_first: 0.0981
+          id_missing: 0.0465
+          none: 0.0413
+        confidence: 0.1969
+      severity:
+        type: score
+        score: 0.5982
+        legend:
+          '0': valid
+          '1': cosmetic
+          '2': reject
+        probabilities:
+          '0': 0.5216
+          '1': 0.3587
+          '2': 0.1198
+        confidence: 0.1027

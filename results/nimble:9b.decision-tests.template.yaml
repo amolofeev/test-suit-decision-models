@@ -1,0 +1,968 @@
+results:
+  model: nimble:9b
+  source: decision-tests/test/decision-tests.template.yaml
+  states:
+  - state: Our checkout has returned 500 errors since 9am.
+    answers:
+      team:
+        type: choice
+        choice: bug
+        probabilities:
+          billing: 0.0102
+          bug: 0.9807
+          account: 0.009
+        confidence: 0.9711
+      team_rev:
+        type: choice
+        choice: bug
+        probabilities:
+          account: 0.0023
+          bug: 0.9211
+          billing: 0.0766
+        confidence: 0.8817
+      urgent:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.0486
+          'yes': 0.9514
+        confidence: 0.9027
+      priority:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.1125
+          'yes': 0.8875
+        confidence: 0.7751
+      urgency:
+        type: choice
+        choice: immediate
+        probabilities:
+          routine: 0.0017
+          soon: 0.0756
+          immediate: 0.9226
+        confidence: 0.884
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.0492
+          frustrated: 0.9508
+        confidence: 0.9017
+      action:
+        type: choice
+        choice: fix
+        probabilities:
+          refund: 0.0015
+          fix: 0.9858
+          answer: 0.0128
+        confidence: 0.9786
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9738
+          spam: 0.0262
+        confidence: 0.9477
+      spam:
+        type: choice
+        choice: venting
+        probabilities:
+          legit: 0.369
+          venting: 0.6168
+          abuse: 0.0021
+          spam: 0.0104
+          scam: 0.0017
+        confidence: 0.521
+      pizza:
+        type: choice
+        choice: pizza
+        probabilities:
+          pizza: 0.5392
+          no_pizza: 0.0993
+          not_on_topic: 0.3616
+        confidence: 0.3087
+      resolution:
+        type: choice
+        choice: clarify
+        probabilities:
+          deny: 0.0461
+          decline: 0.1461
+          ask: 0.3159
+          clarify: 0.4919
+        confidence: 0.3226
+      pii:
+        type: noul
+        noul: 0.0032
+      impact:
+        type: score
+        score: 2.1208
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0012
+          '1': 0.0041
+          '2': 0.8673
+          '3': 0.1274
+        confidence: 0.866
+  - state: Our checkout has returned HTTP 500 errors since 9am.
+    answers:
+      team:
+        type: choice
+        choice: bug
+        probabilities:
+          billing: 0.0127
+          bug: 0.9733
+          account: 0.0139
+        confidence: 0.96
+      team_rev:
+        type: choice
+        choice: bug
+        probabilities:
+          account: 0.0019
+          bug: 0.9091
+          billing: 0.089
+        confidence: 0.8637
+      urgent:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.0644
+          'yes': 0.9356
+        confidence: 0.8712
+      priority:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.1283
+          'yes': 0.8717
+        confidence: 0.7433
+      urgency:
+        type: choice
+        choice: immediate
+        probabilities:
+          routine: 0.0023
+          soon: 0.1314
+          immediate: 0.8663
+        confidence: 0.7995
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.0728
+          frustrated: 0.9272
+        confidence: 0.8544
+      action:
+        type: choice
+        choice: fix
+        probabilities:
+          refund: 0.0009
+          fix: 0.9868
+          answer: 0.0123
+        confidence: 0.9802
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.99
+          spam: 0.01
+        confidence: 0.98
+      spam:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9619
+          venting: 0.032
+          abuse: 0.0009
+          spam: 0.0045
+          scam: 0.0007
+        confidence: 0.9523
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0658
+          no_pizza: 0.06
+          not_on_topic: 0.8742
+        confidence: 0.8113
+      resolution:
+        type: choice
+        choice: clarify
+        probabilities:
+          deny: 0.0304
+          decline: 0.1062
+          ask: 0.3666
+          clarify: 0.4967
+        confidence: 0.329
+      pii:
+        type: noul
+        noul: 0.0027
+      impact:
+        type: score
+        score: 2.3006
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0008
+          '1': 0.0023
+          '2': 0.6923
+          '3': 0.3045
+        confidence: 0.6915
+  - state:
+      ticket:
+        text: Our checkout has returned HTTP 500 errors since 9am.
+        priority: critical
+        tier: enterprise
+        since: 9am
+    answers:
+      team:
+        type: choice
+        choice: bug
+        probabilities:
+          billing: 0.0472
+          bug: 0.9315
+          account: 0.0213
+        confidence: 0.8973
+      team_rev:
+        type: choice
+        choice: bug
+        probabilities:
+          account: 0.0024
+          bug: 0.7974
+          billing: 0.2002
+        confidence: 0.6961
+      urgent:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.0747
+          'yes': 0.9253
+        confidence: 0.8506
+      priority:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.0002
+          'yes': 0.9998
+        confidence: 0.9996
+      urgency:
+        type: choice
+        choice: immediate
+        probabilities:
+          routine: 0.0015
+          soon: 0.0241
+          immediate: 0.9743
+        confidence: 0.9615
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.1373
+          frustrated: 0.8627
+        confidence: 0.7254
+      action:
+        type: choice
+        choice: fix
+        probabilities:
+          refund: 0.0009
+          fix: 0.987
+          answer: 0.0121
+        confidence: 0.9806
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9932
+          spam: 0.0068
+        confidence: 0.9864
+      spam:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9865
+          venting: 0.0075
+          abuse: 0.0005
+          spam: 0.0041
+          scam: 0.0013
+        confidence: 0.9832
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0081
+          no_pizza: 0.0188
+          not_on_topic: 0.9731
+        confidence: 0.9597
+      resolution:
+        type: choice
+        choice: ask
+        probabilities:
+          deny: 0.0231
+          decline: 0.0308
+          ask: 0.5118
+          clarify: 0.4342
+        confidence: 0.3491
+      pii:
+        type: noul
+        noul: 0.0039
+      impact:
+        type: score
+        score: 2.2489
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0013
+          '1': 0.0022
+          '2': 0.7429
+          '3': 0.2536
+        confidence: 0.7416
+  - state:
+      ticket:
+        text: Our checkout has returned HTTP 500 errors since 9am.
+        tier: enterprise
+        since: 9am
+    answers:
+      team:
+        type: choice
+        choice: bug
+        probabilities:
+          billing: 0.0476
+          bug: 0.9334
+          account: 0.019
+        confidence: 0.9001
+      team_rev:
+        type: choice
+        choice: bug
+        probabilities:
+          account: 0.0029
+          bug: 0.8586
+          billing: 0.1384
+        confidence: 0.7879
+      urgent:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.1276
+          'yes': 0.8724
+        confidence: 0.7447
+      priority:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.3625
+          'yes': 0.6375
+        confidence: 0.275
+      urgency:
+        type: choice
+        choice: immediate
+        probabilities:
+          routine: 0.0021
+          soon: 0.1471
+          immediate: 0.8507
+        confidence: 0.7761
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.2979
+          frustrated: 0.7021
+        confidence: 0.4042
+      action:
+        type: choice
+        choice: fix
+        probabilities:
+          refund: 0.0009
+          fix: 0.9877
+          answer: 0.0114
+        confidence: 0.9815
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9927
+          spam: 0.0073
+        confidence: 0.9855
+      spam:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.988
+          venting: 0.0075
+          abuse: 0.0005
+          spam: 0.003
+          scam: 0.001
+        confidence: 0.985
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0061
+          no_pizza: 0.0109
+          not_on_topic: 0.983
+        confidence: 0.9745
+      resolution:
+        type: choice
+        choice: ask
+        probabilities:
+          deny: 0.0187
+          decline: 0.0292
+          ask: 0.4878
+          clarify: 0.4643
+        confidence: 0.3171
+      pii:
+        type: noul
+        noul: 0.0039
+      impact:
+        type: score
+        score: 2.2062
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0013
+          '1': 0.0034
+          '2': 0.783
+          '3': 0.2123
+        confidence: 0.7816
+  - state: I was charged twice. Please refund the extra payment.
+    answers:
+      team:
+        type: choice
+        choice: billing
+        probabilities:
+          billing: 0.9923
+          bug: 0.0044
+          account: 0.0033
+        confidence: 0.9884
+      team_rev:
+        type: choice
+        choice: billing
+        probabilities:
+          account: 0.0008
+          bug: 0.0017
+          billing: 0.9975
+        confidence: 0.9962
+      urgent:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.7895
+          'yes': 0.2105
+        confidence: 0.5791
+      priority:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.8746
+          'yes': 0.1254
+        confidence: 0.7492
+      urgency:
+        type: choice
+        choice: soon
+        probabilities:
+          routine: 0.2419
+          soon: 0.7451
+          immediate: 0.013
+        confidence: 0.6177
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.1046
+          frustrated: 0.8954
+        confidence: 0.7908
+      action:
+        type: choice
+        choice: refund
+        probabilities:
+          refund: 0.9976
+          fix: 0.0005
+          answer: 0.0019
+        confidence: 0.9964
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9897
+          spam: 0.0103
+        confidence: 0.9794
+      spam:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9784
+          venting: 0.0172
+          abuse: 0.0005
+          spam: 0.0021
+          scam: 0.0018
+        confidence: 0.973
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0049
+          no_pizza: 0.0092
+          not_on_topic: 0.9859
+        confidence: 0.9789
+      resolution:
+        type: choice
+        choice: ask
+        probabilities:
+          deny: 0.0408
+          decline: 0.0084
+          ask: 0.7982
+          clarify: 0.1526
+        confidence: 0.731
+      pii:
+        type: noul
+        noul: 0.0068
+      impact:
+        type: score
+        score: 1.0293
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0045
+          '1': 0.9675
+          '2': 0.0224
+          '3': 0.0057
+        confidence: 0.9618
+  - state: I WAS CHARGED TWICE!!! This is UNACCEPTABLE. Refund my money NOW, I want
+      this fixed IMMEDIATELY.
+    answers:
+      team:
+        type: choice
+        choice: billing
+        probabilities:
+          billing: 0.9939
+          bug: 0.0029
+          account: 0.0032
+        confidence: 0.9909
+      team_rev:
+        type: choice
+        choice: billing
+        probabilities:
+          account: 0.0006
+          bug: 0.0019
+          billing: 0.9975
+        confidence: 0.9963
+      urgent:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.061
+          'yes': 0.939
+        confidence: 0.8779
+      priority:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.095
+          'yes': 0.905
+        confidence: 0.8099
+      urgency:
+        type: choice
+        choice: immediate
+        probabilities:
+          routine: 0.0046
+          soon: 0.1357
+          immediate: 0.8598
+        confidence: 0.7896
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.0001
+          frustrated: 0.9999
+        confidence: 0.9998
+      action:
+        type: choice
+        choice: refund
+        probabilities:
+          refund: 0.9953
+          fix: 0.0023
+          answer: 0.0023
+        confidence: 0.993
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.888
+          spam: 0.112
+        confidence: 0.776
+      spam:
+        type: choice
+        choice: venting
+        probabilities:
+          legit: 0.002
+          venting: 0.9931
+          abuse: 0.0027
+          spam: 0.0007
+          scam: 0.0015
+        confidence: 0.9914
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0014
+          no_pizza: 0.0021
+          not_on_topic: 0.9965
+        confidence: 0.9948
+      resolution:
+        type: choice
+        choice: ask
+        probabilities:
+          deny: 0.0536
+          decline: 0.0076
+          ask: 0.8007
+          clarify: 0.1381
+        confidence: 0.7343
+      pii:
+        type: noul
+        noul: 0.0041
+      impact:
+        type: score
+        score: 1.0361
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0063
+          '1': 0.956
+          '2': 0.033
+          '3': 0.0047
+        confidence: 0.9512
+  - state: I can't log into my account. The password reset email never arrives.
+    answers:
+      team:
+        type: choice
+        choice: account
+        probabilities:
+          billing: 0.0003
+          bug: 0.0023
+          account: 0.9974
+        confidence: 0.9961
+      team_rev:
+        type: choice
+        choice: account
+        probabilities:
+          account: 0.9929
+          bug: 0.0035
+          billing: 0.0036
+        confidence: 0.9894
+      urgent:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.6453
+          'yes': 0.3547
+        confidence: 0.2906
+      priority:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.8559
+          'yes': 0.1441
+        confidence: 0.7118
+      urgency:
+        type: choice
+        choice: soon
+        probabilities:
+          routine: 0.0631
+          soon: 0.8146
+          immediate: 0.1223
+        confidence: 0.722
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.04
+          frustrated: 0.96
+        confidence: 0.9201
+      action:
+        type: choice
+        choice: fix
+        probabilities:
+          refund: 0.0092
+          fix: 0.8411
+          answer: 0.1497
+        confidence: 0.7617
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9866
+          spam: 0.0134
+        confidence: 0.9732
+      spam:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9669
+          venting: 0.0129
+          abuse: 0.0006
+          spam: 0.0065
+          scam: 0.0131
+        confidence: 0.9586
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0013
+          no_pizza: 0.0024
+          not_on_topic: 0.9963
+        confidence: 0.9944
+      resolution:
+        type: choice
+        choice: ask
+        probabilities:
+          deny: 0.014
+          decline: 0.0099
+          ask: 0.5234
+          clarify: 0.4528
+        confidence: 0.3645
+      pii:
+        type: noul
+        noul: 0.0049
+      impact:
+        type: score
+        score: 1.1341
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0046
+          '1': 0.872
+          '2': 0.1081
+          '3': 0.0153
+        confidence: 0.8566
+  - state: Your app is the worst I've ever used. Whoever designed this should be fired.
+    answers:
+      team:
+        type: choice
+        choice: bug
+        probabilities:
+          billing: 0.0226
+          bug: 0.8907
+          account: 0.0867
+        confidence: 0.836
+      team_rev:
+        type: choice
+        choice: bug
+        probabilities:
+          account: 0.0831
+          bug: 0.8807
+          billing: 0.0362
+        confidence: 0.8211
+      urgent:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.8496
+          'yes': 0.1504
+        confidence: 0.6992
+      priority:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.8291
+          'yes': 0.1709
+        confidence: 0.6581
+      urgency:
+        type: choice
+        choice: soon
+        probabilities:
+          routine: 0.3454
+          soon: 0.6468
+          immediate: 0.0078
+        confidence: 0.4703
+      frustrated:
+        type: choice
+        choice: frustrated
+        probabilities:
+          calm: 0.0005
+          frustrated: 0.9995
+        confidence: 0.9989
+      action:
+        type: choice
+        choice: answer
+        probabilities:
+          refund: 0.008
+          fix: 0.0098
+          answer: 0.9822
+        confidence: 0.9732
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9815
+          spam: 0.0185
+        confidence: 0.9631
+      spam:
+        type: choice
+        choice: venting
+        probabilities:
+          legit: 0.0023
+          venting: 0.975
+          abuse: 0.0216
+          spam: 0.0007
+          scam: 0.0003
+        confidence: 0.9688
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0059
+          no_pizza: 0.0071
+          not_on_topic: 0.9871
+        confidence: 0.9806
+      resolution:
+        type: choice
+        choice: decline
+        probabilities:
+          deny: 0.0414
+          decline: 0.6486
+          ask: 0.1269
+          clarify: 0.1831
+        confidence: 0.5315
+      pii:
+        type: noul
+        noul: 0.0028
+      impact:
+        type: score
+        score: 1.4278
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0057
+          '1': 0.5711
+          '2': 0.413
+          '3': 0.0102
+        confidence: 0.5609
+  - state: 'Love the product! One idea: it would be great to export reports as CSV.'
+    answers:
+      team:
+        type: choice
+        choice: bug
+        probabilities:
+          billing: 0.0339
+          bug: 0.8684
+          account: 0.0977
+        confidence: 0.8026
+      team_rev:
+        type: choice
+        choice: bug
+        probabilities:
+          account: 0.1432
+          bug: 0.7757
+          billing: 0.0811
+        confidence: 0.6636
+      urgent:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.9888
+          'yes': 0.0112
+        confidence: 0.9777
+      priority:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.9879
+          'yes': 0.0121
+        confidence: 0.9758
+      urgency:
+        type: choice
+        choice: routine
+        probabilities:
+          routine: 0.9608
+          soon: 0.0369
+          immediate: 0.0023
+        confidence: 0.9412
+      frustrated:
+        type: choice
+        choice: calm
+        probabilities:
+          calm: 0.9875
+          frustrated: 0.0125
+        confidence: 0.975
+      action:
+        type: choice
+        choice: answer
+        probabilities:
+          refund: 0.0007
+          fix: 0.0015
+          answer: 0.9978
+        confidence: 0.9968
+      spam_binary:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9908
+          spam: 0.0092
+        confidence: 0.9816
+      spam:
+        type: choice
+        choice: legit
+        probabilities:
+          legit: 0.9943
+          venting: 0.0026
+          abuse: 0.0003
+          spam: 0.0024
+          scam: 0.0004
+        confidence: 0.9929
+      pizza:
+        type: choice
+        choice: not_on_topic
+        probabilities:
+          pizza: 0.0021
+          no_pizza: 0.0044
+          not_on_topic: 0.9935
+        confidence: 0.9902
+      resolution:
+        type: choice
+        choice: deny
+        probabilities:
+          deny: 0.6879
+          decline: 0.1243
+          ask: 0.0606
+          clarify: 0.1272
+        confidence: 0.5838
+      pii:
+        type: noul
+        noul: 0.0034
+      impact:
+        type: score
+        score: 1.0233
+        legend:
+          '0': 'No one: internal or cosmetic issue'
+          '1': 'A few customers: isolated reports'
+          '2': 'Many customers: widespread problem'
+          '3': 'Everyone: the service is down for all users'
+        probabilities:
+          '0': 0.0144
+          '1': 0.9527
+          '2': 0.0281
+          '3': 0.0047
+        confidence: 0.948

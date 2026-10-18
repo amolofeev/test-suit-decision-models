@@ -1,0 +1,195 @@
+results:
+  model: d1-omni:600m
+  source: decision-tests/test/one-sense-forms.yaml
+  states:
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5489
+          'no': 0.4511
+        confidence: 0.0978
+  - state: '```text
+
+      #42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.
+
+      ```'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3973
+          'no': 0.6027
+        confidence: 0.2054
+  - state: 'Правила оформления коммитов:
+
+      1. Заголовок: #<id> [AI] <краткое резюме задачи>.
+
+      2. После заголовка — пустая строка.
+
+      3. Подробное объяснение пунктом на строку.
+
+
+      Задача: проверь соблюдение правил.
+
+
+      Коммит:
+
+      #42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6819
+          'no': 0.3181
+        confidence: 0.3638
+  - state:
+      commit:
+        text: '#42 [AI] Добавил валидацию спеки decision-tests
+
+          - Подключил msgspec к загрузке YAML-спеки.
+
+          - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4427
+          'no': 0.5573
+        confidence: 0.1146
+  - state:
+      commit:
+        text: '#42 [AI] Добавил валидацию спеки decision-tests
+
+          - Подключил msgspec к загрузке YAML-спеки.
+
+          - Добавил краш на неизвестные поля секции test.'
+        priority: critical
+        tier: enterprise
+        channel: git
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5021
+          'no': 0.4979
+        confidence: 0.0042
+  - state:
+      commit:
+        rules: '1. Заголовок: #<id> [AI] <краткое резюме задачи>.
+
+          2. После заголовка — пустая строка.
+
+          3. Подробное объяснение пунктом на строку.'
+        task: проверь соблюдение правил
+        text: '#42 [AI] Добавил валидацию спеки decision-tests
+
+          - Подключил msgspec к загрузке YAML-спеки.
+
+          - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6672
+          'no': 0.3328
+        confidence: 0.3343
+  - state: "{\n  \"commit\": {\n    \"text\": \"#42 [AI] Добавил валидацию спеки decision-tests\\\
+      n- Подключил msgspec к загрузке YAML-спеки.\\n- Добавил краш на неизвестные\
+      \ поля секции test.\"\n  }\n}"
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4707
+          'no': 0.5293
+        confidence: 0.0586
+  - state: '#42 [AI] ДОБАВИЛ ВАЛИДАЦИЮ СПЕКИ DECISION-TESTS
+
+      - ПОДКЛЮЧИЛ MSGSPEC К ЗАГРУЗКЕ YAML-СПЕКИ.
+
+      - ДОБАВИЛ КРАШ НА НЕИЗВЕСТНЫЕ ПОЛЯ СЕКЦИИ TEST.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3753
+          'no': 0.6247
+        confidence: 0.2494
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5279
+          'no': 0.4721
+        confidence: 0.0558
+  - state: '#42 [AI] Added spec validation for decision-tests
+
+      - Connected msgspec to load the YAML spec.
+
+      - Added a crash on unknown fields in the test section.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.4207
+          'no': 0.5793
+        confidence: 0.1587
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      (первый блок идёт сразу под заголовком)
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6109
+          'no': 0.3891
+        confidence: 0.2217
+  - state:
+      commit:
+        lines:
+        - '#42 [AI] Добавил валидацию спеки decision-tests'
+        - '- Подключил msgspec к загрузке YAML-спеки.'
+        - '- Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6237
+          'no': 0.3763
+        confidence: 0.2473

@@ -1,0 +1,78 @@
+results:
+  model: d1:3b
+  source: decision-tests/test/one-fact-wordings.yaml
+  states:
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5369
+          'no': 0.4631
+        confidence: 0.0739
+      blank_line_rev:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.4775
+          'yes': 0.5225
+        confidence: 0.0449
+      blank_line_defect:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.8575
+          'no': 0.1425
+        confidence: 0.715
+      blank_line_rule:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6293
+          'no': 0.3707
+        confidence: 0.2585
+      blank_line_neg:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6885
+          'no': 0.3115
+        confidence: 0.3771
+      blank_line_criteria:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7407
+          'no': 0.2593
+        confidence: 0.4814
+      blank_line_ident:
+        type: choice
+        choice: direct
+        probabilities:
+          empty_line: 0.0942
+          direct: 0.9058
+        confidence: 0.8116
+      blank_line_verdict:
+        type: choice
+        choice: ok
+        probabilities:
+          violated: 0.407
+          ok: 0.593
+        confidence: 0.1859
+      blank_line_score:
+        type: score
+        score: 1.2064
+        legend:
+          '0': нарушено
+          '1': частично
+          '2': выполнено
+        probabilities:
+          '0': 0.2356
+          '1': 0.3224
+          '2': 0.442
+        confidence: 0.0

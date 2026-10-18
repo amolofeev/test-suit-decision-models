@@ -1,0 +1,78 @@
+results:
+  model: laya:322m-multilingual-bf16
+  source: decision-tests/test/one-fact-wordings.yaml
+  states:
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7614
+          'no': 0.2386
+        confidence: 0.5227
+      blank_line_rev:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.0706
+          'yes': 0.9294
+        confidence: 0.8588
+      blank_line_defect:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7529
+          'no': 0.2471
+        confidence: 0.5058
+      blank_line_rule:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.7943
+          'no': 0.2057
+        confidence: 0.5886
+      blank_line_neg:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6485
+          'no': 0.3515
+        confidence: 0.2969
+      blank_line_criteria:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.876
+          'no': 0.124
+        confidence: 0.7519
+      blank_line_ident:
+        type: choice
+        choice: empty_line
+        probabilities:
+          empty_line: 0.7202
+          direct: 0.2798
+        confidence: 0.4404
+      blank_line_verdict:
+        type: choice
+        choice: ok
+        probabilities:
+          violated: 0.0725
+          ok: 0.9275
+        confidence: 0.8549
+      blank_line_score:
+        type: score
+        score: 1.3533
+        legend:
+          '0': нарушено
+          '1': частично
+          '2': выполнено
+        probabilities:
+          '0': 0.0482
+          '1': 0.5502
+          '2': 0.4015
+        confidence: 0.3254

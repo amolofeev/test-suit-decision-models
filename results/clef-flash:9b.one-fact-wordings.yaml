@@ -1,0 +1,78 @@
+results:
+  model: clef-flash:9b
+  source: decision-tests/test/one-fact-wordings.yaml
+  states:
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.7749
+          'yes': 0.2251
+        confidence: 0.5498
+      blank_line_rev:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.7868
+          'yes': 0.2132
+        confidence: 0.5736
+      blank_line_defect:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'no': 0.4207
+          'yes': 0.5793
+        confidence: 0.1585
+      blank_line_rule:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.6902
+          'yes': 0.3098
+        confidence: 0.3805
+      blank_line_neg:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.5581
+          'yes': 0.4419
+        confidence: 0.1163
+      blank_line_criteria:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.7171
+          'yes': 0.2829
+        confidence: 0.4342
+      blank_line_ident:
+        type: choice
+        choice: direct
+        probabilities:
+          direct: 0.5693
+          empty_line: 0.4307
+        confidence: 0.1385
+      blank_line_verdict:
+        type: choice
+        choice: violated
+        probabilities:
+          ok: 0.4436
+          violated: 0.5564
+        confidence: 0.1128
+      blank_line_score:
+        type: score
+        score: 0.974
+        legend:
+          '0': нарушено
+          '1': частично
+          '2': выполнено
+        probabilities:
+          '0': 0.3729
+          '1': 0.2802
+          '2': 0.3469
+        confidence: 0.0

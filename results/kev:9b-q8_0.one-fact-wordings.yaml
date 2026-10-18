@@ -1,0 +1,78 @@
+results:
+  model: kev:9b-q8_0
+  source: decision-tests/test/one-fact-wordings.yaml
+  states:
+  - state: '#42 [AI] Добавил валидацию спеки decision-tests
+
+      - Подключил msgspec к загрузке YAML-спеки.
+
+      - Добавил краш на неизвестные поля секции test.'
+    answers:
+      blank_line:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3367
+          'no': 0.6633
+        confidence: 0.3266
+      blank_line_rev:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'no': 0.6425
+          'yes': 0.3575
+        confidence: 0.2849
+      blank_line_defect:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.3689
+          'no': 0.6311
+        confidence: 0.2622
+      blank_line_rule:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.5434
+          'no': 0.4566
+        confidence: 0.0869
+      blank_line_neg:
+        type: choice
+        choice: 'yes'
+        probabilities:
+          'yes': 0.6546
+          'no': 0.3454
+        confidence: 0.3091
+      blank_line_criteria:
+        type: choice
+        choice: 'no'
+        probabilities:
+          'yes': 0.2996
+          'no': 0.7004
+        confidence: 0.4008
+      blank_line_ident:
+        type: choice
+        choice: direct
+        probabilities:
+          empty_line: 0.3407
+          direct: 0.6593
+        confidence: 0.3186
+      blank_line_verdict:
+        type: choice
+        choice: ok
+        probabilities:
+          violated: 0.2887
+          ok: 0.7113
+        confidence: 0.4226
+      blank_line_score:
+        type: score
+        score: 1.105
+        legend:
+          '0': нарушено
+          '1': частично
+          '2': выполнено
+        probabilities:
+          '0': 0.3555
+          '1': 0.184
+          '2': 0.4605
+        confidence: 0.0
