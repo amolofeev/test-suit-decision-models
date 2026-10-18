@@ -1,0 +1,137 @@
+test:
+  states:
+    - |
+      Our checkout has returned 500 errors since 9am.
+    - |
+      Our checkout has returned HTTP 500 errors since 9am.
+    # объект вместо строки: тот же тикет, но структурированный, с параметрами
+    - ticket:
+        text: Our checkout has returned HTTP 500 errors since 9am.
+        priority: critical
+        tier: enterprise
+        since: "9am"
+    # объект без поля priority — для вопроса priority: поле есть, но пусто
+    - ticket:
+        text: Our checkout has returned HTTP 500 errors since 9am.
+        tier: enterprise
+        since: "9am"
+    - |
+      I was charged twice. Please refund the extra payment.
+    - |
+      I WAS CHARGED TWICE!!! This is UNACCEPTABLE. Refund my money NOW, I want this fixed IMMEDIATELY.
+    - |
+      I can't log into my account. The password reset email never arrives.
+    - |
+      Your app is the worst I've ever used. Whoever designed this should be fired.
+    - |
+      Love the product! One idea: it would be great to export reports as CSV.
+  questions:
+    - name: team
+      q: |
+        Which team should handle this ticket?
+      answers:
+        billing: Payments and refunds
+        bug: Software errors
+        account: Login and account access
+
+    # дубль team с обратным порядком ответов — проверка влияния порядка опций
+    - name: team_rev
+      q: |
+        Which team should handle this ticket?
+      answers:
+        account: Login and account access
+        bug: Software errors
+        billing: Payments and refunds
+
+    - name: urgent
+      q: |
+        Does this ticket need attention within the hour?
+      answers:
+        "no": No urgency
+        "yes": Needs attention within the hour
+
+    # вопрос к полям объекта-стейта: у строковых стейтов поля нет —
+    # интересно, как модели ответят, когда `priority` отсутствует
+    - name: priority
+      q: |
+        Is the `priority` field of this ticket critical?
+      answers:
+        "no": The priority is not critical or the field is absent
+        "yes": The priority field is set to critical
+
+    - name: urgency
+      q: |
+        How urgently does this ticket need a response?
+      answers:
+        routine: Routine - no time pressure
+        soon: Soon - a customer is inconvenienced
+        immediate: Immediate - a critical service is unavailable
+
+    - name: frustrated
+      q: |
+        Is the customer frustrated?
+      answers:
+        calm: The customer is calm or positive
+        frustrated: The customer is frustrated or angry
+
+    - name: action
+      q: |
+        What does the customer want us to do?
+      answers:
+        refund: Refund or billing correction
+        fix: Fix a bug or restore service
+        answer: Answer a question or consider feedback
+
+    - name: spam_binary
+      q: |
+        Is this message spam or abuse?
+      answers:
+        legit: A legitimate customer message
+        spam: Spam, abuse or a bot
+
+    - name: spam
+      q: |
+        How would you classify this message from a content-moderation point
+        of view?
+      answers:
+        legit: A normal customer message, polite and on topic
+        venting: An upset but real customer venting, rude yet legitimate
+        abuse: Direct insults, threats or hate speech
+        spam: Unsolicited advertising or off-topic promotion
+        scam: Fraud trying to steal money or data, such as phishing
+
+    - name: pizza
+      q: |
+        Should we order pizza for the team tonight?
+      answers:
+        pizza: Yes, let's order pizza
+        no_pizza: No, skip the pizza
+        not_on_topic: The question has nothing to do with this message
+
+    - name: resolution
+      q: |
+        How should support respond to this request?
+      answers:
+        deny: Refuse the request and explain the policy
+        decline: Reject the request and close the ticket
+        ask: Ask the customer for more information before deciding
+        clarify: Request additional details before answering
+
+    - name: pii
+      type: noul
+      q: |
+        Does this message contain a payment card number or other sensitive
+        personal data?
+      answers:
+        "false": No sensitive personal data is present
+        "true": A card number or other sensitive data is present
+
+    - name: impact
+      type: score
+      q: |
+        How many customers are affected by this issue?
+      answers:
+        - "No one: internal or cosmetic issue"
+        - "A few customers: isolated reports"
+        - "Many customers: widespread problem"
+        - "Everyone: the service is down for all users"
